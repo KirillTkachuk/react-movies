@@ -15,7 +15,7 @@ export default function MoviePage({data}) {
             <p><i>Жанр:</i> {data.genres}</p>
             <p> <i>Режиссер:</i> {data.director}</p>
 
-            <Link to={`/movie/${data.id}/edit`}>Редактировать</Link>
+            <Link className="simple-page edit-link" to={`/movie/${data.id}/edit`}>Редактировать</Link>
         </div>
     );
 }

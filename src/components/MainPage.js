@@ -16,7 +16,7 @@ export default function MainPage (props) {
                                         <div className='movie-img'>
                                             <img alt={movie.title} src={movie.posterUrl} />
                                         </div>
-                                        <p> <i>Описание:</i> {movie.plot}</p>
+                                        <p> <i>Описание:</i> {movie.plot.substring(0, 50)}...</p>
                                         <p> <i>Год выпуска:</i> {movie.year}</p>
                                         <p> <i>Продолжительность:</i> {movie.runtime} мин</p>
                                         <p> <i>Жанр:</i> {movie.genres}</p>
