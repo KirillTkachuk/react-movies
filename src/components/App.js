@@ -31,17 +31,25 @@ class App extends Component {
 
             <Route exact path={`/movie/:movieId`} render={props => {
               let movie = this.props.movies.find(movie => movie.id === +props.match.params.movieId);
+              if (!movie) {
+                return <div/>
+              }
               return <MoviePage {...props} data={movie}/>
             }}/>
 
             <Route exact path={`/movie/:movieId/edit`} render={props => {
               let movie = this.props.movies.find(movie => movie.id === +props.match.params.movieId);
+              if (!movie) {
+                return <div/>
+              }
               return <EditMoviePage {...props} data={movie} editMovie={this.props.editMovie}/>
             }}/>   
 
             <Route exact path={`/add`} render={props => {
               return <AddMoviePage {...props} addMovie={this.props.addMovie}/>
             }}/> 
+
+            <Route exact render={props => <h1>Упс, ничего не найдено... :(</h1>}/> 
           </div> : <p>Загружаем данные...</p>
         }
         

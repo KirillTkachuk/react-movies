@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import history from '../history'
+
 class AddMoviePage extends Component {
     state = {
         id: Date.now(),
