@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Route, withRouter, Link } from 'react-router-dom'
+import { Route, withRouter, Link, Switch } from 'react-router-dom'
 import './App.css'
 
 import MainPage from './MainPage'
@@ -25,7 +25,7 @@ class App extends Component {
          <Link className="menu-button" to={`/`}>Главная страница</Link>
         {
           this.props.movies.length > 0 ?
-          <div>         
+          <Switch>         
             <Route exact path="/" render={props => <MainPage {...props} data={this.props.movies}/>} />
 
             <Route exact path={`/movie/:movieId`} render={props => {
@@ -48,8 +48,8 @@ class App extends Component {
               return <AddMoviePage {...props} addMovie={this.props.addMovie}/>
             }}/> 
 
-            <Route exact render={props => <h1>Упс, ничего не найдено... :(</h1>}/> 
-          </div> : <p>Загружаем данные...</p>
+            <Route exact  path={`*`} render={props => <h1>Упс, ничего не найдено... :(</h1>}/> 
+          </Switch> : <p>Загружаем данные...</p>
         }
         
       </div>
