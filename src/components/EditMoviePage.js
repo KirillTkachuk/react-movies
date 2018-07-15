@@ -23,7 +23,7 @@ class EditMoviePage extends Component {
             <div>
                 <h2>Страница Редактирования</h2>
                 
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='title' value={this.state.title} placeholder='Название'/>
+                <input onChange={this.inputHandler} className='input' name='title' value={this.state.title} placeholder='Название'/>
                 <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='posterUrl' value={this.state.posterUrl} placeholder='URL Картинки' />
                 <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='runtime' value={this.state.runtime} placeholder='Продолжительность' />
                 <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='year' value={this.state.year} placeholder='Год создания' />

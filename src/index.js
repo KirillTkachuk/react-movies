@@ -4,14 +4,14 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom'
 
-import movieApp from './reducers'
+import appState from './reducers'
 
 import './index.css'
 import App from './components/App'
 
 import registerServiceWorker from './registerServiceWorker'
 
-const store = createStore(movieApp);
+const store = createStore(appState);
 
 ReactDOM.render(
     <Provider store={store}>
