@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
-import { Route, Link } from 'react-router-dom'
-
-const inputs = ['title', 'posterUrl', 'runtime', 'year', 'plot', 'director', 'actors',  'genres']
+import { Link } from 'react-router-dom'
 
 class AddMoviePage extends Component {
     state = {
@@ -20,7 +18,6 @@ class AddMoviePage extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
     render () {
-        const {data, addMovie} = this.props;
         return (
             <div>
                 <h2>Страница Добавления</h2>
@@ -35,7 +32,7 @@ class AddMoviePage extends Component {
                 <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='genres' value={this.state.genres} placeholder='Жанр' />  
             
                 {/* <button >Сохранить</button> */}
-                <Link onClick={() => addMovie(this.state)} to={`/`}>Сохранить</Link>
+                <Link onClick={() => this.props.addMovie(this.state)} to={`/`}>Сохранить</Link>
             </div>
         );
     }

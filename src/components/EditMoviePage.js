@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
-import { Route, Link } from 'react-router-dom'
-
-const inputs = ['title', 'posterUrl', 'runtime', 'year', 'plot', 'director', 'actors',  'genres']
+import { Link } from 'react-router-dom'
 
 class EditMoviePage extends Component {
     state = {
@@ -21,7 +19,6 @@ class EditMoviePage extends Component {
     }
     render () {
         const {data, editMovie} = this.props;
-        console.log(this.props)
         return (
             <div>
                 <h2>Страница Редактирования</h2>

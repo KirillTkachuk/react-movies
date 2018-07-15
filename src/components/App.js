@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Route, Switch, withRouter, Link } from 'react-router-dom'
+import { Route, withRouter, Link } from 'react-router-dom'
 import './App.css'
 
 import MainPage from './MainPage'
@@ -29,12 +29,12 @@ class App extends Component {
             <Route exact path="/" render={props => <MainPage {...props} data={this.props.movies}/>} />
 
             <Route exact path={`/movie/:movieId`} render={props => {
-              let movie = this.props.movies.find(movie => movie.id == props.match.params.movieId);
+              let movie = this.props.movies.find(movie => movie.id === props.match.params.movieId);
               return <MoviePage {...props} data={movie}/>
             }}/>
 
             <Route exact path={`/movie/:movieId/edit`} render={props => {
-              let movie = this.props.movies.find(movie => movie.id == props.match.params.movieId);
+              let movie = this.props.movies.find(movie => movie.id === props.match.params.movieId);
               return <EditMoviePage {...props} data={movie} editMovie={this.props.editMovie}/>
             }}/>   
 

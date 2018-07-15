@@ -1,13 +1,12 @@
 import React from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
-import EditMoviePage from './EditMoviePage';
+import { Link } from 'react-router-dom'
 
 export default function MoviePage({data}) {
     return (    
         <div>
             <h2>Страница Фильма {data.title}</h2>
             <p>{data.title}</p>
-            <img src={data.posterUrl}/>
+            <img alt={data.title} src={data.posterUrl}/>
             <p><i>Продолжительность:</i> {data.runtime} мин</p>
             <p><i>Год выпуска:</i> {data.year}</p>
             <p><i>Описание:</i> {data.plot}</p>
