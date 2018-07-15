@@ -39,8 +39,10 @@ class AddMoviePage extends Component {
                 <label>Жанр</label>
                 <input onChange={this.inputHandler} name='genres' value={this.state.genres} placeholder='Жанр' />  
             
-                {/* <button >Сохранить</button> */}
-                <Link onClick={() => this.props.addMovie(this.state)} to={`/`}>Сохранить</Link>
+                <div className="buttons-wrapper">
+                    <Link className="save" onClick={() => this.props.addMovie(this.state)} to={`/`}>Сохранить</Link>
+                </div>  
+                
             </div>
         );
     }
