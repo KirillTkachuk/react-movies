@@ -26,7 +26,9 @@ class EditMoviePage extends Component {
         editMovie(this.state);
     }
 
-    cancel = () => {
+    cancel = (e) => {
+        e.preventDefault();
+        
         const {id, title, posterUrl, runtime, year, plot, director, actors, genres} = this.props.data;
         this.setState({
             id,
