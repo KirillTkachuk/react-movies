@@ -3,7 +3,130 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-.input {
+input {
   display: block;
+  width: 90%;
+  height: 45px;
   margin: auto;
+  padding: 10px;
+  box-sizing : border-box;
+}
+label {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.menu-button {
+  justify-content: center;
+  height: 40px;
+  background-color: #29ebff;
+  width: 200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.movies-list {
+  display: flex; 
+  flex-flow: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.movie-wrapper {
+  width: 33.333%;
+}
+.movie {
+  margin: 20px;
+  background-color: #29ebff;
+  padding: 10px;
+  height: calc(100% - 40px);
+}
+.movie-img {
+  width: 250px;
+  height: 370px;
+  margin: auto;
+}
+.movie-img > img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.movie-link-wrap {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transition: all .3s ease;  
+}
+.movie-link-wrap:hover {
+  color: #fff;
+  transition: all .3s ease;  
+}
+.edit-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  margin: auto;
+  width: 115px;
+  transition: all .3s ease;
+}
+.edit-link:hover {
+  background-color: #000;
+  transition: all .3s ease;
+  color: #fff;
+}
+.save {
+  display: flex;
+  width: 170px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+  border: 2px solid #000000;
+  text-decoration: none;
+  transition: all .3s ease;
+  margin: 10px;  
+}
+.save:hover{
+  color: #fff;
+  background-color: #000000;
+  transition: all .3s ease;
+}
+
+.cancel {
+  display: flex;
+  width: 170px;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-weight: bold;
+  border: 2px solid red;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all .3s ease;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.cancel:hover {
+  color: #fff;
+  background-color: red;
+  transition: all .3s ease;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

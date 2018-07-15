@@ -39,17 +39,27 @@ class EditMoviePage extends Component {
             <div>
                 <h2>Страница Редактирования</h2>
                 
-                <input onChange={this.inputHandler} className='input' name='title' value={this.state.title} placeholder='Название'/>
-                <input onChange={this.inputHandler} className='input' name='posterUrl' value={this.state.posterUrl} placeholder='URL Картинки' />
-                <input onChange={this.inputHandler} className='input' name='runtime' value={this.state.runtime} placeholder='Продолжительность' />
-                <input onChange={this.inputHandler} className='input' name='year' value={this.state.year} placeholder='Год создания' />
-                <input onChange={this.inputHandler} className='input' name='plot' value={this.state.plot} placeholder='Описание' />
-                <input onChange={this.inputHandler} className='input' name='director' value={this.state.director} placeholder='Режиссер' />
-                <input onChange={this.inputHandler} className='input' name='actors' value={this.state.actors} placeholder='Актер' />
-                <input onChange={this.inputHandler} className='input' name='genres' value={this.state.genres} placeholder='Жанр' />  
-            
-                <Link onClick={() => editMovie(this.state)} to={`/movie/${data.id}`}>Сохранить</Link>
-                <button onClick={this.cancel}>Отменить</button>
+                <label>Название</label>
+                <input onChange={this.inputHandler} name='title' value={this.state.title} placeholder='Название'/>
+                <label>URL Картинки</label>
+                <input onChange={this.inputHandler} name='posterUrl' value={this.state.posterUrl} placeholder='URL Картинки' />
+                <label>Продолжительность</label>
+                <input onChange={this.inputHandler} name='runtime' value={this.state.runtime} placeholder='Продолжительность' />
+                <label>Год создания</label>
+                <input onChange={this.inputHandler} name='year' value={this.state.year} placeholder='Год создания' />
+                <label>Описание</label>
+                <input onChange={this.inputHandler} name='plot' value={this.state.plot} placeholder='Описание' />
+                <label>Режиссер</label>
+                <input onChange={this.inputHandler} name='director' value={this.state.director} placeholder='Режиссер' />
+                <label>Актеры</label>
+                <input onChange={this.inputHandler} name='actors' value={this.state.actors} placeholder='Актеры' />
+                <label>Жанр</label>
+                <input onChange={this.inputHandler} name='genres' value={this.state.genres} placeholder='Жанр' />  
+
+                <div className="buttons-wrapper">
+                    <Link className="save" onClick={() => editMovie(this.state)} to={`/movie/${data.id}`}>Сохранить</Link>
+                    <button className='cancel' onClick={this.cancel}>Отменить</button>
+                </div>    
             </div>
         );
     }

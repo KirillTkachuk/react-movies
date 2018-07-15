@@ -23,7 +23,7 @@ class App extends Component {
     console.log(this.props.movies.find(movie => movie.id === '2'))
     return (
       <div className="App">
-         <Link to={`/`}>Главная страница</Link>
+         <Link className="menu-button" to={`/`}>Главная страница</Link>
         {
           this.props.movies.length > 0 ?
           <div>         
@@ -42,7 +42,7 @@ class App extends Component {
             <Route exact path={`/add`} render={props => {
               return <AddMoviePage {...props} addMovie={this.props.addMovie}/>
             }}/> 
-          </div> : <div/>
+          </div> : <p>Загружаем данные...</p>
         }
         
       </div>

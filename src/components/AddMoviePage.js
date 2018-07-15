@@ -22,14 +22,22 @@ class AddMoviePage extends Component {
             <div>
                 <h2>Страница Добавления</h2>
                 
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='title' value={this.state.title} placeholder='Название'/>
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='posterUrl' value={this.state.posterUrl} placeholder='URL Картинки' />
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='runtime' value={this.state.runtime} placeholder='Продолжительность' />
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='year' value={this.state.year} placeholder='Год создания' />
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='plot' value={this.state.plot} placeholder='Описание' />
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='director' value={this.state.director} placeholder='Режиссер' />
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='actors' value={this.state.actors} placeholder='Актер' />
-                <input onChange={this.inputHandler} style={{display: 'block', margin: 'auto'}} name='genres' value={this.state.genres} placeholder='Жанр' />  
+                <label>Название</label>                
+                <input onChange={this.inputHandler} name='title' value={this.state.title} placeholder='Название'/>
+                <label>URL Картинки</label>
+                <input onChange={this.inputHandler} name='posterUrl' value={this.state.posterUrl} placeholder='URL Картинки' />
+                <label>Продолжительность</label>
+                <input onChange={this.inputHandler} name='runtime' value={this.state.runtime} placeholder='Продолжительность' />
+                <label>Год создания</label>
+                <input onChange={this.inputHandler} name='year' value={this.state.year} placeholder='Год создания' />
+                <label>Описание</label>
+                <input onChange={this.inputHandler} name='plot' value={this.state.plot} placeholder='Описание' />
+                <label>Режиссер</label>
+                <input onChange={this.inputHandler} name='director' value={this.state.director} placeholder='Режиссер' />
+                <label>Актеры</label>
+                <input onChange={this.inputHandler} name='actors' value={this.state.actors} placeholder='Актер' />
+                <label>Жанр</label>
+                <input onChange={this.inputHandler} name='genres' value={this.state.genres} placeholder='Жанр' />  
             
                 {/* <button >Сохранить</button> */}
                 <Link onClick={() => this.props.addMovie(this.state)} to={`/`}>Сохранить</Link>
