@@ -31,7 +31,7 @@ class App extends Component {
             <Route exact path={`/movie/:movieId`} render={props => {
               let movie = this.props.movies.find(movie => movie.id === +props.match.params.movieId);
               if (!movie) {
-                return <div/>
+                return <h2>Такого фильма не существует</h2>
               }
               return <MoviePage {...props} data={movie}/>
             }}/>
@@ -39,7 +39,7 @@ class App extends Component {
             <Route exact path={`/movie/:movieId/edit`} render={props => {
               let movie = this.props.movies.find(movie => movie.id === +props.match.params.movieId);
               if (!movie) {
-                return <div/>
+                return <h2>Такого фильма не существует</h2>
               }
               return <EditMoviePage {...props} data={movie} editMovie={this.props.editMovie}/>
             }}/>   
