@@ -20,7 +20,6 @@ class App extends Component {
    
   }
   render() {
-    console.log(this.props.movies.find(movie => movie.id === '2'))
     return (
       <div className="App">
          <Link className="menu-button" to={`/`}>Главная страница</Link>
